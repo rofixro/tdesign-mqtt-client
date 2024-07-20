@@ -19,6 +19,8 @@ app.config.errorHandler = (err) => {
 }
 // 注册全局组件
 app.component('HelloWorld', HelloWorld)
+// 注册全局对象
+app.config.globalProperties.window = window
 
 app.mount('#app') // 可以设置一组 css 选择器，但是只渲染第一个 dom
 // 可以设置多个实例
