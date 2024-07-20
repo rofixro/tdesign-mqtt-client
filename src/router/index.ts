@@ -5,8 +5,13 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      name: 'introduce',
-      component: () => import('../views/introduce.vue')
+      name: 'quick-start',
+      component: () => import('../views/quick-start.vue')
+    },
+    {
+      path: '/template-syntax',
+      name: 'template-syntax',
+      component: () => import('../views/template-syntax.vue')
     }
   ]
 })

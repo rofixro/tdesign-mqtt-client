@@ -1,4 +1,6 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+// console.log(hello)
+</script>
 
 <template>
   <div>
@@ -10,5 +12,6 @@
       <li>渐进式使用</li>
       <li>单文件组件</li>
     </ul>
+    <HelloWorld />
   </div>
 </template>
