@@ -33,6 +33,11 @@ const router = createRouter({
       name: 'conditional',
       component: () => import('../views/conditional.vue')
     },
+    {
+      path: '/event-handling',
+      name: 'event-handling',
+      component: () => import('../views/event-handling.vue')
+    }
   ]
 })
 
