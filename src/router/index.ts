@@ -22,7 +22,13 @@ const router = createRouter({
       path: '/computed',
       name: 'computed',
       component: () => import('../views/computed.vue')
-    }
+    },
+    {
+      path: '/tailwindcss',
+      name: 'tailwindcss',
+      component: () => import('../views/tailwindcss.vue')
+    },
+    
   ]
 })
 
