@@ -37,6 +37,11 @@ const router = createRouter({
       path: '/event-handling',
       name: 'event-handling',
       component: () => import('../views/event-handling.vue')
+    },
+    {
+      path: '/lifecycle',
+      name: 'lifecycle',
+      component: () => import('../views/lifecycle.vue')
     }
   ]
 })
