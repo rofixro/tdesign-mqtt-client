@@ -12,6 +12,11 @@ const router = createRouter({
       path: '/template-syntax',
       name: 'template-syntax',
       component: () => import('../views/template-syntax.vue')
+    },
+    {
+      path: '/reactivity-fundamentals',
+      name: 'reactivity-fundamentals',
+      component: () => import('../views/reactivity-fundamentals.vue')
     }
   ]
 })
