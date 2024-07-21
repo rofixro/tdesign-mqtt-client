@@ -17,6 +17,11 @@ const router = createRouter({
       path: '/reactivity-fundamentals',
       name: 'reactivity-fundamentals',
       component: () => import('../views/reactivity-fundamentals.vue')
+    },
+    {
+      path: '/computed',
+      name: 'computed',
+      component: () => import('../views/computed.vue')
     }
   ]
 })
