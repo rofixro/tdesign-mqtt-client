@@ -28,7 +28,11 @@ const router = createRouter({
       name: 'tailwindcss',
       component: () => import('../views/tailwindcss.vue')
     },
-    
+    {
+      path: '/conditional',
+      name: 'conditional',
+      component: () => import('../views/conditional.vue')
+    },
   ]
 })
 
