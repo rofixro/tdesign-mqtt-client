@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import { ref, watch, computed, reactive } from 'vue'
+import { ref, watch, computed, reactive, watchEffect } from 'vue'
 
 // 侦听器自动对 ref 解构
 const count = ref(0)
+const params = ref(0)
 const obj = ref({ b: 233 })
 const obj1 = reactive({ c: 222, d: { name: '张三' } })
 const computedMessage = computed(() => count.value + 1)
@@ -63,6 +64,15 @@ watch(
 
 // 一次性侦听器
 // once: true
+
+// watchEffect 用法
+// 1. 当你需要 watch 即时回调时可以使用
+// 2. 当你需要 watch 的源数据需要在回调里面使用时，可以使用 watchEffect
+watchEffect(() => {
+  // console.log('watchEffect 侦听器被触发了, 值是' + count.value)
+  params.value = count.value
+  console.log(1)
+})
 </script>
 
 <template>
