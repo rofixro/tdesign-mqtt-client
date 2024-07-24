@@ -4,7 +4,7 @@ import { ref, watch, computed, reactive } from 'vue'
 // 侦听器自动对 ref 解构
 const count = ref(0)
 const obj = ref({ b: 233 })
-const obj1 = reactive({ c: 222 })
+const obj1 = reactive({ c: 222, d: { name: '张三' } })
 const computedMessage = computed(() => count.value + 1)
 
 function handleClick1() {
@@ -12,7 +12,7 @@ function handleClick1() {
 }
 
 function handleClick2() {
-  obj.value = { a: 123 }
+  obj.value = { b: 123 }
 }
 
 function handleClick3() {
@@ -44,12 +44,25 @@ watch(
   }
 )
 
+// 传入一个响应式对象，会隐式的创建一个深层监听器，监听每一个子属性的变动
+watch(obj1, (value) => {
+  console.log('obj1 被侦听到了, 值是' + value)
+})
+
+// 在给 watch 传入的 getter 函数中，如果监听的对象是响应式对象，则除替换为不同的对象，否则无法监听到变化
+// 可以传入 deep 选项，强制转换成深层侦听器
 watch(
-  () => obj1.c,
+  () => obj1.d,
   (value) => {
-    console.log('obj1 的 c 被侦听到了, 值是' + value)
+    console.log('obj1 的 d 被侦听到了， 值是' + value)
   }
 )
+
+// 既时回调侦听器
+// immediate: true
+
+// 一次性侦听器
+// once: true
 </script>
 
 <template>
