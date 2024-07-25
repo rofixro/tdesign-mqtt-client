@@ -73,6 +73,10 @@ watchEffect(() => {
   params.value = count.value
   console.log(1)
 })
+
+// 回调触发的时机
+
+// 关闭侦听器
 </script>
 
 <template>
