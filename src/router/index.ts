@@ -58,6 +58,11 @@ const router = createRouter({
       name: 'component-basics',
       component: () => import('../views/component-basics.vue')
     },
+    {
+      path: '/v-model',
+      name: 'v-model',
+      component: () => import('../views/v-model.vue')
+    },
   ]
 })
 
