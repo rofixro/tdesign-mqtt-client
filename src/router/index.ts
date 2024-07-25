@@ -52,7 +52,12 @@ const router = createRouter({
       path: '/template-refs',
       name: 'template-refs',
       component: () => import('../views/template-refs.vue')
-    }
+    },
+    {
+      path: '/component-basics',
+      name: 'component-basics',
+      component: () => import('../views/component-basics.vue')
+    },
   ]
 })
 

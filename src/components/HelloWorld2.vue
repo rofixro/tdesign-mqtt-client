@@ -1,11 +1,12 @@
 <script setup lang="ts">
-import { onMounted } from 'vue'
+import { onUnmounted } from 'vue';
 
-onMounted(() => {
-    console.log(a)
+
+onUnmounted(() => {
+    console.log('HelloWorld2 被卸载了')
 })
 </script>
 
 <template>
-    <div></div>
+    <div>HelloWorld2</div>
 </template>

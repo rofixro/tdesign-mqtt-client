@@ -8,5 +8,5 @@ defineExpose({ a, b })
 </script>
 
 <template>
-    <div></div>
+    <div>HelloWorld3</div>
 </template>
