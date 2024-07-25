@@ -63,6 +63,11 @@ const router = createRouter({
       name: 'v-model',
       component: () => import('../views/v-model.vue')
     },
+    {
+      path: '/attributes',
+      name: 'attributes',
+      component: () => import('../views/attributes.vue')
+    }
   ]
 })
 
